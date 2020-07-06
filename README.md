@@ -1,11 +1,11 @@
-# Very short description of the package
+# Laravel Link Shortener
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/kodesire/laravel-shortener.svg?style=flat-square)](https://packagist.org/packages/kodesire/laravel-shortener)
 [![Build Status](https://img.shields.io/travis/kodesire/laravel-shortener/master.svg?style=flat-square)](https://travis-ci.org/kodesire/laravel-shortener)
 [![Quality Score](https://img.shields.io/scrutinizer/g/kodesire/laravel-shortener.svg?style=flat-square)](https://scrutinizer-ci.com/g/kodesire/laravel-shortener)
 [![Total Downloads](https://img.shields.io/packagist/dt/kodesire/laravel-shortener.svg?style=flat-square)](https://packagist.org/packages/kodesire/laravel-shortener)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Local link shortener for Laravel 7
 
 ## Installation
 
@@ -15,13 +15,45 @@ You can install the package via composer:
 composer require danielebuso/shortener
 ```
 
+Publish the migration and migrate
+
+``` bash
+php artisan vendor:publish --tag=migrations
+php artisan migrate
+```
+
 ## Usage
 
 ``` php
-Route::domain('myapp.com')->group(function () {
+$short_link = Shortener::shorten('https://example.com/my-very-long-link');
+
+$short_link->short_url // Eg. https://myapp.com/l/JedO8TSC
+```
+
+## Customize routing
+
+To customize the link routing add the following to your routes and customize as you wish
+
+``` php
+Route::domain('mylink.com')->group(function () {
     Route::get('{short_link}', 'ShortLinkController@resolve')->name('short_link');
 });
+
+// Then in controller
+$short_link->short_url // Eg. https://mylink.com/JedO8TSC
 ```
+
+## Configuration
+
+To customize the config either use the environment variables or publish the configuration file
+
+``` bash
+php artisan vendor:publish --tag=config
+```
+
+| Config      | .env                  | Default | Description                                         |
+|-------------|-----------------------|---------|-----------------------------------------------------|
+| link_length | SHORTENER_LINK_LENGTH | 8       | Number of random characters used in link generation |
 
 ### Testing
 
@@ -29,13 +61,11 @@ Route::domain('myapp.com')->group(function () {
 composer test
 ```
 
-### Changelog
+### Upcoming features
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+- [X] Custom validity (nbf, exp)
+- [ ] Link analitycs (times opened)
+- [ ] Real tests
 
 ### Security
 

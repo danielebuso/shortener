@@ -1,16 +1,16 @@
 <?php
 
-namespace DanieleBuso\LaravelShortener\Tests;
+namespace danielebuso\shortener\Tests;
 
+use danielebuso\shortener\ShortenerServiceProvider;
 use Orchestra\Testbench\TestCase;
-use DanieleBuso\LaravelShortener\LaravelShortenerServiceProvider;
 
 class ExampleTest extends TestCase
 {
 
     protected function getPackageProviders($app)
     {
-        return [LaravelShortenerServiceProvider::class];
+        return [ShortenerServiceProvider::class];
     }
 
     /** @test */
