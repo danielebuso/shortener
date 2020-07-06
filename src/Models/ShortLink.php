@@ -19,8 +19,25 @@ use Illuminate\Support\Carbon;
  */
 class ShortLink extends Model
 {
+    /**
+     * The "type" of the auto-incrementing ID.
+     *
+     * @var string
+     */
+    protected $keyType = 'string';
+
+    /**
+     * The table name that has been migrated.
+     *
+     * @var array
+     */
     protected $table = 'short_links';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
         'id',
         'url',
@@ -29,11 +46,21 @@ class ShortLink extends Model
         'enabled',
     ];
 
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
     protected $casts = [
         'not_before' => 'datetime',
         'expire_at' => 'datetime',
     ];
 
+    /**
+     * Generate short link url using route
+     *
+     * @return string
+     */
     public function getShortUrlAttribute() {
         return route('short_link', [$this->id]);
     }
