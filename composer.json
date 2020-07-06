@@ -1,0 +1,54 @@
+{
+    "name": "danielebuso/laravel-shortener",
+    "description": "Laravel 7 local url shortener",
+    "keywords": [
+        "danielebuso",
+        "laravel-shortener"
+    ],
+    "homepage": "https://github.com/danielebuso/laravel-shortener",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Daniele Buso",
+            "email": "daniele@kodesire.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "danielebuso\\shortener\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "danielebuso\\shortener\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "danielebuso\\shortener\\shortenerServiceProvider"
+            ],
+            "aliases": {
+                "shortener": "danielebuso\\shortener\\shortenerFacade"
+            }
+        }
+    }
+}
