@@ -1,9 +1,9 @@
 # Laravel Link Shortener
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/kodesire/laravel-shortener.svg?style=flat-square)](https://packagist.org/packages/kodesire/laravel-shortener)
-[![Build Status](https://img.shields.io/travis/kodesire/laravel-shortener/master.svg?style=flat-square)](https://travis-ci.org/kodesire/laravel-shortener)
-[![Quality Score](https://img.shields.io/scrutinizer/g/kodesire/laravel-shortener.svg?style=flat-square)](https://scrutinizer-ci.com/g/kodesire/laravel-shortener)
-[![Total Downloads](https://img.shields.io/packagist/dt/kodesire/laravel-shortener.svg?style=flat-square)](https://packagist.org/packages/kodesire/laravel-shortener)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/danielebuso/shortener.svg?style=flat-square)](https://packagist.org/packages/danielebuso/shortener)
+[![Build Status](https://img.shields.io/travis/danielebuso/shortener/master.svg?style=flat-square)](https://travis-ci.org/danielebuso/shortener)
+[![Quality Score](https://img.shields.io/scrutinizer/g/danielebuso/shortener.svg?style=flat-square)](https://scrutinizer-ci.com/g/danielebuso/shortener)
+[![Total Downloads](https://img.shields.io/packagist/dt/danielebuso/shortener.svg?style=flat-square)](https://packagist.org/packages/danielebuso/shortener)
 
 Local link shortener for Laravel 7
 
