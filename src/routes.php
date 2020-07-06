@@ -5,6 +5,6 @@
  */
 return [
 
-    Route::get('l/{short_link}', 'danielebuso\\shortener\\Controllers\\ShortLinkController@resolve')->name('short_link')
+    Route::get('l/{short_link}', 'danielebuso\\shortener\\Controllers\\ShortLinkController@resolve')->middleware('bindings')->name('short_link')
 
 ];
