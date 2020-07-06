@@ -19,7 +19,7 @@ class Shortener
      * ]
      * @return array
      */
-    public static function shorten(string $url, array $opt)
+    public static function shorten(string $url, array $opt = [])
     {
         $link_length = $opt['length'] || config('shortener.link_length') || 8;
 
