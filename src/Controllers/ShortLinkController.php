@@ -11,10 +11,10 @@ class ShortLinkController extends Controller
     public function resolve(ShortLink $short_link)
     {
         // Check if link is expired
-        if ($short_link->expire_at->isPast()) abort(401);
+        if ($short_link->expire_at && $short_link->expire_at->isPast()) abort(401);
 
         // Check if link is not yet available
-        if ($short_link->not_before->isFuture()) abort(401);
+        if ($short_link->not_before && $short_link->not_before->isFuture()) abort(401);
 
         // Check if link is enabled
         if (!$short_link->enabled) abort(401);
