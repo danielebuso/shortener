@@ -19,7 +19,7 @@ composer require danielebuso/shortener
 
 ``` php
 Route::domain('myapp.com')->group(function () {
-    Route::get('{short_link}', 'ShortLinkController@resolve')->name('short_link')
+    Route::get('{short_link}', 'ShortLinkController@resolve')->name('short_link');
 });
 ```
 
