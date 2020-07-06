@@ -3,7 +3,8 @@
     "description": "Laravel 7 local url shortener",
     "keywords": [
         "danielebuso",
-        "laravel-shortener"
+        "laravel",
+        "shortener"
     ],
     "homepage": "https://github.com/danielebuso/laravel-shortener",
     "license": "MIT",
@@ -17,7 +18,7 @@
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "^6.0"
+        "illuminate/support": "^7.0"
     },
     "require-dev": {
         "orchestra/testbench": "^4.0",
