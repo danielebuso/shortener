@@ -11,6 +11,7 @@ use Illuminate\Support\Carbon;
  *
  * @property string id
  * @property string url
+ * @property string short_url
  * @property DateTime|Carbon|null not_before
  * @property DateTime|Carbon|null expire_at
  * @property boolean enabled

@@ -17,7 +17,7 @@ class Shortener
      *  'expire_at' => null, // Link expiry date
      *  'not_before' => null, // Link validity start date
      * ]
-     * @return array
+     * @return ShortLink
      */
     public static function shorten(string $url, array $opt = [])
     {
