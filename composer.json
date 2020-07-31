@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "danielebuso\\shortener\\shortenerServiceProvider"
+                "danielebuso\\shortener\\ShortenerServiceProvider"
             ],
             "aliases": {
-                "shortener": "danielebuso\\shortener\\shortenerFacade"
+                "shortener": "danielebuso\\shortener\\ShortenerFacade"
             }
         }
     }
